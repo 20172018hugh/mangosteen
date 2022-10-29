@@ -11,7 +11,6 @@ export const App = defineComponent({
                         </li>
                         <li>
                             <router-link to="/bar">Bar</router-link>
-
                         </li>
                     </ul>
                 </header>
