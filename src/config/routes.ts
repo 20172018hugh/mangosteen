@@ -6,12 +6,13 @@ import { Bar } from "../views/Bar";
 import { Foo } from "../views/Foo";
 import { Welcome } from "../views/Welcome";
 export const routes = [
-    { path: '/', component: Foo },
+    { path: '/', redirect: '/welcome', component: Foo },
     { path: '/bar', component: Bar },
     {
         path: '/welcome',
         component: Welcome,
         children: [
+            { path: '', redirect: '/welcome/1', component: First },
             { path: '1', component: First },
             { path: '2', component: Second },
             { path: '3', component: Third },
