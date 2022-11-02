@@ -5,6 +5,10 @@ import { First } from './../components/welcome/First';
 import { Bar } from "../views/Bar";
 import { Foo } from "../views/Foo";
 import { Welcome } from "../views/Welcome";
+import { FirstActions } from '../components/welcome/FirstActions';
+import { SecondActions } from '../components/welcome/SecondActions';
+import { ThirdActions } from '../components/welcome/ThirdActions';
+import { FourthActions } from '../components/welcome/FourthActions';
 export const routes = [
     { path: '/', redirect: '/welcome', component: Foo },
     { path: '/bar', component: Bar },
@@ -13,10 +17,10 @@ export const routes = [
         component: Welcome,
         children: [
             { path: '', redirect: '/welcome/1', component: First },
-            { path: '1', component: First },
-            { path: '2', component: Second },
-            { path: '3', component: Third },
-            { path: '4', component: Fourth },
+            { path: '1', components: { main: First, footer: FirstActions }, },
+            { path: '2', components: { main: Second, footer: SecondActions }, },
+            { path: '3', components: { main: Third, footer: ThirdActions }, },
+            { path: '4', components: { main: Fourth, footer: FourthActions }, },
         ]
     },
 ]
