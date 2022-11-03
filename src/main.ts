@@ -3,6 +3,7 @@ import { routes } from './config/routes';
 import { createApp } from "vue";
 import { App } from "./App";
 import { createRouter } from 'vue-router'
+import '@svgstore';
 
 
 const router = createRouter({
