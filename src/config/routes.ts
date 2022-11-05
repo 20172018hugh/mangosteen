@@ -1,3 +1,4 @@
+import { StartPage } from './../views/StartPage';
 import { Fourth } from './../components/welcome/Fourth';
 import { Third } from './../components/welcome/Third';
 import { Second } from './../components/welcome/Second';
@@ -23,4 +24,5 @@ export const routes = [
             { path: '4', name: "Welcome4", components: { main: Fourth, footer: FourthActions }, },
         ]
     },
+    { path: '/start', component: StartPage },
 ]
