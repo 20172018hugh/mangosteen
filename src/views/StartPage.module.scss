@@ -8,10 +8,18 @@
 
 .pig {
     &_wrapper {
-        padding: 160px 0;
-        .pig{
+        padding: 120px 0;
+
+        .pig {
             width: 128px;
             height: 128px;
         }
     }
+}
+
+.navIcon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 2px;
 }
