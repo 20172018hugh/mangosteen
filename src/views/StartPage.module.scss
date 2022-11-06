@@ -5,3 +5,13 @@
         padding: 16px 16px;
     }
 }
+
+.pig {
+    &_wrapper {
+        padding: 160px 0;
+        .pig{
+            width: 128px;
+            height: 128px;
+        }
+    }
+}
