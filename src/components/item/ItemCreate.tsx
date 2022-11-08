@@ -12,11 +12,11 @@ export const ItemCreate = defineComponent({
     setup: (props, context) => {
         const refKind = ref('支出')
         return () => (
-            <MainLayout>{{
+            <MainLayout class={s.layout}>{{
                 title: () => '记一笔',
                 icon: () => <Icon name="left" class={s.navIcon} />,
                 default: () => <>
-                    <Tabs v-model:selected={refKind.value}>
+                    <Tabs v-model:selected={refKind.value} class={s.tabs}>
                         <Tab name="支出">
                             icon 列表
                         </Tab>
