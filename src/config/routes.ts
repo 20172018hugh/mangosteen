@@ -5,11 +5,14 @@ import { Second } from './../components/welcome/Second';
 import { First } from './../components/welcome/First';
 import { Bar } from "../views/Bar";
 import { Foo } from "../views/Foo";
+import { ItemCreate } from "../components/item/ItemCreate";
+import { ItemList } from "../components/item/ItemList";
 import { Welcome } from "../views/Welcome";
 import { FirstActions } from '../components/welcome/FirstActions';
 import { SecondActions } from '../components/welcome/SecondActions';
 import { ThirdActions } from '../components/welcome/ThirdActions';
 import { FourthActions } from '../components/welcome/FourthActions';
+import { ItemPage } from "../views/ItemPage"
 export const routes = [
     { path: '/', redirect: '/welcome', component: Foo },
     { path: '/bar', component: Bar },
@@ -25,4 +28,11 @@ export const routes = [
         ]
     },
     { path: '/start', component: StartPage },
+    {
+        path: '/items', component: ItemPage,
+        children: [
+            { path: '', component: ItemList },
+            { path: 'create', component: ItemCreate },
+        ]
+    }
 ]
