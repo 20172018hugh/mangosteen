@@ -1,6 +1,7 @@
 import { defineComponent, Transition, VNode } from "vue";
-import { RouteLocationNormalizedLoaded,  RouterView } from "vue-router";
+import { RouteLocationNormalizedLoaded, RouterView } from "vue-router";
 import "./App.scss"
+import 'vant/lib/index.css'
 export const App = defineComponent({
     setup() {
         return () => (
