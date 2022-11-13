@@ -11,11 +11,18 @@
     margin-top: 8px;
 }
 
-.formLabel {}
+.icon {
+    width: 26px;
+    height: 26px;
+}
 
 .formItem {
     min-height: var(--input-min-height);
     max-width: 100%;
+
+    &.button {
+        width: 100%;
+    }
 
     &.input {
         flex-grow: 1;

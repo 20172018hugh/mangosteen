@@ -13,7 +13,7 @@ export const TagCreate = defineComponent({
         return () => (
             <MainLayout>{{
                 title: () => '新建标签',
-                icon: () => <Icon name="left" onClick={() => { }} />,
+                icon: () => <Icon name="left" class={s.icon} onClick={() => { }} />,
                 default: () => (
                     <form class={s.form}>
                         <div class={s.formRow}>
