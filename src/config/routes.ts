@@ -13,6 +13,9 @@ import { SecondActions } from '../components/welcome/SecondActions';
 import { ThirdActions } from '../components/welcome/ThirdActions';
 import { FourthActions } from '../components/welcome/FourthActions';
 import { ItemPage } from "../views/ItemPage"
+import { TagCreate } from '../components/tag/TagCreate';
+import { TagEdit } from '../components/tag/TagEdit';
+import { TagPage } from '../views/TagPage';
 export const routes = [
     { path: '/', redirect: '/welcome', component: Foo },
     { path: '/bar', component: Bar },
@@ -33,6 +36,13 @@ export const routes = [
         children: [
             { path: '', component: ItemList },
             { path: 'create', component: ItemCreate },
+        ]
+    },
+    {
+        path: '/tags', component: TagPage,
+        children: [
+            { path: 'create', component: TagCreate },
+            { path: ':id', component: TagEdit }
         ]
     }
 ]
