@@ -14,7 +14,7 @@ export const TagCreate = defineComponent({
     setup: (props, context) => {
         const formData = reactive({
             name: '',
-            sign: 'x',
+            sign: '',
         })
         const errors = reactive<{ [k in keyof typeof formData]?: string[] }>({})
         const onsubmit = (e: Event) => {
